@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CubeBlocks>
+    <Definition xsi:type="MyObjectBuilder_RefineryDefinition">
+      <Id>
+        <TypeId>Refinery</TypeId>
+        <SubtypeId>LargeArcFurnace</SubtypeId>
+      </Id>
+      <DisplayName>Blast Furnace</DisplayName>
+	  <Description>A much faster, if slightly less efficient, refinery for iron, nickel, cobalt, and silicon.</Description>
+      <Icon>Textures\GUI\Icons\Cubes\blastfurnace.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="2" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Large\BlastFurnace.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="220" />
+        <Component Subtype="Construction" Count="60" />
+        <Component Subtype="Motor" Count="40" />
+        <Component Subtype="MetalGrid" Count="15" />
+        <Component Subtype="LargeTube" Count="30" />
+        <Component Subtype="Thruster" Count="2" />
+        <Component Subtype="Computer" Count="40" />
+        <Component Subtype="Construction" Count="15" />
+        <Component Subtype="SteelPlate" Count="80" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <MirroringZ>Y</MirroringZ>
+      <MirroringY>Z</MirroringY>
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true" />
+        <MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="2" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\BlastFurnace_Constr1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\BlastFurnace_Constr2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\BlastFurnace_Constr3.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>Arc Furnace</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>60</BuildTimeSeconds>
+      <ResourceSinkGroup>Factory</ResourceSinkGroup>
+      <InventoryMaxVolume>4</InventoryMaxVolume>
+      <InventorySize>
+        <X>2</X>
+        <Y>2</Y>
+        <Z>2</Z>
+      </InventorySize>
+      <StandbyPowerConsumption>0.004</StandbyPowerConsumption>
+      <OperationalPowerConsumption>0.72</OperationalPowerConsumption> <!-- basic refinery is 330kW = 0.33, normal refinery 560kW -->
+      <BlueprintClasses>
+        <Class>BlastFurnaceMetals</Class>
+      </BlueprintClasses>
+      <RefineSpeed>4.0</RefineSpeed> <!-- basic refinery is 0.65, normal refinery 1.3; started with 2.4, then 4 -->
+      <MaterialEfficiency>0.85</MaterialEfficiency> <!-- basic refinery is 0.7, normal refinery 1.0 -->
+      <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+      <DamagedSound>ParticleHeavyMech</DamagedSound>
+      <PrimarySound>BlockRafinery</PrimarySound>
+      <ActionSound>BlockRafineryProcess</ActionSound>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+      <OreAmountPerPullRequest>2000</OreAmountPerPullRequest>
+      <PCU>75</PCU>
+    </Definition>
+  </CubeBlocks>
+</Definitions>

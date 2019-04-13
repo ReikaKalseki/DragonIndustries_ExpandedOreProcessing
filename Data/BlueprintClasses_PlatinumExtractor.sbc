@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <BlueprintClasses>
+    <Class>
+      <Id>                   
+        <TypeId>BlueprintClassDefinition</TypeId>
+        <SubtypeId>PlatinumExtractor</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
+      <Icon>Textures\GUI\Icons\buttons\large_block.dds</Icon>
+      <HighlightIcon>Textures\GUI\Icons\buttons\large_block_highlight.dds</HighlightIcon>
+      <InputConstraintIcon>Textures\filter_platinum.dds</InputConstraintIcon>
+      <OutputConstraintIcon>Textures\filter_ingot.dds</OutputConstraintIcon>
+    </Class>
+  </BlueprintClasses>
+  <BlueprintClassEntries>
+    <Entry Class="LargeBlocks" BlueprintSubtypeId="Refinery/LargePlatinumExtractor" />
+    <Entry Class="PlatinumExtractor" BlueprintSubtypeId="PlatinumOreToIngot" />
+  </BlueprintClassEntries>
+</Definitions>

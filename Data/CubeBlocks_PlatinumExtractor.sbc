@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CubeBlocks>
+    <Definition xsi:type="MyObjectBuilder_RefineryDefinition">
+      <Id>
+        <TypeId>Refinery</TypeId>
+        <SubtypeId>LargePlatinumExtractor</SubtypeId>
+      </Id>
+      <DisplayName>Platinum Extractor</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\platinumextractor.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="2" y="5" z="2" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Large\PlatinumExtractor.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="1250" />
+        <Component Subtype="Construction" Count="450" />
+        <Component Subtype="Motor" Count="20" />
+        <Component Subtype="LargeTube" Count="8" />
+        <Component Subtype="Computer" Count="25" />
+        <Component Subtype="GravityGenerator" Count="40" />
+        <Component Subtype="MetalGrid" Count="2" />
+        <Component Subtype="Detector" Count="2" />
+        <Component Subtype="MetalGrid" Count="2" />
+        <Component Subtype="Display" Count="1" />
+        <Component Subtype="Construction" Count="50" />
+        <Component Subtype="SteelPlate" Count="250" />
+      </Components>
+      <CriticalComponent Subtype="Display" Index="0" />
+      <MountPoints>
+		<MountPoint Side="Back" StartX="0" StartY="0" EndX="2" EndY="5" />
+		<MountPoint Side="Front" StartX="0" StartY="0" EndX="2" EndY="1" />
+		<MountPoint Side="Left" StartX="0" StartY="0" EndX="2" EndY="1" />
+		<MountPoint Side="Right" StartX="0" StartY="0" EndX="2" EndY="1" />
+		<MountPoint Side="Left" StartX="0.7" StartY="4" EndX="2" EndY="5" />
+		<MountPoint Side="Right" StartX="0" StartY="4" EndX="1.3" EndY="5" />
+		<MountPoint Side="Top" StartX="0" StartY="0.7" EndX="2" EndY="2" />
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="2" EndY="2" />
+      </MountPoints>
+	  <!--
+      <MirroringZ>Y</MirroringZ>
+      <MirroringY>Z</MirroringY>
+	  -->
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.20" File="Models\Cubes\Large\PlatinumExtractorConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.50" File="Models\Cubes\Large\PlatinumExtractorConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="0.75" File="Models\Cubes\Large\PlatinumExtractorConstruction_3.mwm" />
+		<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\PlatinumExtractorConstruction_4.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>PlatinumExtractor</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>60</BuildTimeSeconds>
+      <ResourceSinkGroup>Factory</ResourceSinkGroup>
+      <InventoryMaxVolume>4</InventoryMaxVolume>
+      <InventorySize>
+        <X>4</X>
+        <Y>4</Y>
+        <Z>2</Z>
+      </InventorySize>
+      <StandbyPowerConsumption>0.08</StandbyPowerConsumption>
+      <OperationalPowerConsumption>1.8</OperationalPowerConsumption>
+      <BlueprintClasses>
+        <Class>PlatinumExtractor</Class>
+      </BlueprintClasses>
+      <RefineSpeed>1.8</RefineSpeed> <!-- refinery is 1.3; this was 1.6 until Apr 2019 -->
+      <MaterialEfficiency>2</MaterialEfficiency> <!-- default refinery is 0.8 [1.0 as of out-of-beta], this was 1.5 until compensated for modules -->
+    </Definition>
+  </CubeBlocks>
+</Definitions>

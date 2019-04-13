@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CubeBlocks>
+    <Definition xsi:type="MyObjectBuilder_RefineryDefinition">
+      <Id>
+        <TypeId>Refinery</TypeId>
+        <SubtypeId>LargeHex_StoneCrusher</SubtypeId>
+      </Id>
+      <DisplayName>Stone Crusher</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\stonecrusher.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="2" y="1" z="2" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Large\stonecrusher.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="80" />
+        <Component Subtype="Construction" Count="45" />
+        <Component Subtype="Motor" Count="20" />
+        <Component Subtype="LargeTube" Count="10" />
+        <Component Subtype="MetalGrid" Count="4" />
+        <Component Subtype="SteelPlate" Count="10" />
+        <Component Subtype="Computer" Count="5" />
+        <Component Subtype="Construction" Count="5" />
+        <Component Subtype="SteelPlate" Count="10" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\stonecrusher_1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\stonecrusher_1.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\stonecrusher_1.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>Hex_StoneCrusher</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>25</BuildTimeSeconds>
+      <InventoryMaxVolume>4</InventoryMaxVolume>
+      <InventorySize>
+        <X>4</X>
+        <Y>4</Y>
+        <Z>2</Z>
+      </InventorySize>
+      <StandbyPowerConsumption>0.003</StandbyPowerConsumption>
+      <OperationalPowerConsumption>0.6</OperationalPowerConsumption>
+      <BlueprintClasses>
+        <Class>Hex_StoneCrusher</Class>
+      </BlueprintClasses>
+      <RefineSpeed>4</RefineSpeed>
+      <MaterialEfficiency>1</MaterialEfficiency>
+    </Definition>
+  </CubeBlocks>
+</Definitions>

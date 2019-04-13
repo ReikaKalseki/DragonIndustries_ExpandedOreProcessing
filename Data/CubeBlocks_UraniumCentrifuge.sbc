@@ -7,6 +7,7 @@
         <SubtypeId>Hex_UraniumCentrifuge</SubtypeId>
       </Id>
       <DisplayName>Uranium Centrifuge</DisplayName>
+	  <Description>A centrifuge to extract purified, fissionable uranium. Works more effectively with pre-gasified uranium.</Description>
       <Icon>Textures\GUI\Icons\Cubes\uraniumcentrifuge.dds</Icon>
       <CubeSize>Large</CubeSize>
       <BlockTopology>TriangleMesh</BlockTopology>
@@ -43,6 +44,7 @@
       <OperationalPowerConsumption>0.3</OperationalPowerConsumption>
       <BlueprintClasses>
         <Class>Hex_UraniumCentrifuge</Class>
+        <Class>UraniumCentrifugeGas</Class>
       </BlueprintClasses>
       <RefineSpeed>0.65</RefineSpeed> <!-- was 0.55 in Hex's code; base refinery is 1.3 -->
       <MaterialEfficiency>1.6</MaterialEfficiency> <!-- was 1.6 in Hex's code; base refinery is 1.0 -->

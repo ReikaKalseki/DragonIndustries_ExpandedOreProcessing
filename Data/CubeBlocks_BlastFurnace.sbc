@@ -20,7 +20,7 @@
         <Component Subtype="Motor" Count="40" />
         <Component Subtype="MetalGrid" Count="15" />
         <Component Subtype="LargeTube" Count="30" />
-        <Component Subtype="Thruster" Count="2" />
+        <Component Subtype="Thrust" Count="2" />
         <Component Subtype="Computer" Count="40" />
         <Component Subtype="Construction" Count="15" />
         <Component Subtype="SteelPlate" Count="80" />
